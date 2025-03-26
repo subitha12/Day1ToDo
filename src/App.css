@@ -1,63 +1,89 @@
+/* Global Styles */
 body {
   font-family: "Arial", sans-serif;
   margin: 0;
   padding: 0;
+  background: #7d26cd; /* Deep violet */
+  color: white;
   transition: background 0.3s, color 0.3s;
 }
 
+/* App Container */
 .app {
   text-align: center;
   padding: 20px;
-  min-height: 100vh; /* Ensures the entire viewport is covered */
+  min-height: 100vh; /* Ensures it covers the full screen */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
+/* Todo Input */
 .todo-form input {
   padding: 10px;
   margin-right: 10px;
+  border: 1px solid #ffffff;
+  border-radius: 4px;
+  outline: none;
 }
 
+/* Todo Item */
 .todo-item {
   display: flex;
   justify-content: space-between;
-  padding: 10px;
+  padding: 12px;
   margin: 10px;
-  background: white;
-  border-radius: 5px;
-  width: 300px;
+  background: rgb(248, 210, 239);
+  border-radius: 8px;
+  width: 500px;
+  height: 30px;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
 }
 
+/* Buttons */
 button {
-  padding: 5px 10px;
-  margin: 5px;
   cursor: pointer;
+  background:rgb(255, 222, 248);
+  color: #000000;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: 0.3s;
+}
+
+button:hover {
+  color: rgb(0, 0, 0);
 }
 
 /* Light Mode */
 .app.light {
-  background: #f0f0f0;
+  background: #e6e6fa; /* Lavender shade */
   color: black;
-  min-height: 100vh; /* Covers entire screen */
-  width: 100%;
 }
 
 /* Dark Mode */
 .app.dark {
-  background: #222;
+  background: #4b0082; /* Dark indigo */
   color: white;
-  min-height: 100vh; /* Covers entire screen */
-  width: 100%;
 }
 
+/* Theme Toggle */
 .theme-toggle {
   position: absolute;
   top: 10px;
   right: 10px;
-  background: none;
+  background: white;
+  color: #7d26cd;
   border: none;
   font-size: 16px;
+  padding: 6px 10px;
   cursor: pointer;
+  border-radius: 5px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.theme-toggle:hover {
+  background: #512da8;
+  color: white;
 }
