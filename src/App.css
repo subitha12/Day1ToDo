@@ -1,0 +1,63 @@
+body {
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+  transition: background 0.3s, color 0.3s;
+}
+
+.app {
+  text-align: center;
+  padding: 20px;
+  min-height: 100vh; /* Ensures the entire viewport is covered */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.todo-form input {
+  padding: 10px;
+  margin-right: 10px;
+}
+
+.todo-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  margin: 10px;
+  background: white;
+  border-radius: 5px;
+  width: 300px;
+}
+
+button {
+  padding: 5px 10px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+/* Light Mode */
+.app.light {
+  background: #f0f0f0;
+  color: black;
+  min-height: 100vh; /* Covers entire screen */
+  width: 100%;
+}
+
+/* Dark Mode */
+.app.dark {
+  background: #222;
+  color: white;
+  min-height: 100vh; /* Covers entire screen */
+  width: 100%;
+}
+
+.theme-toggle {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+}
